@@ -27,7 +27,7 @@ class _CanvasScreenState extends State<CanvasScreen> with SingleTickerProviderSt
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Lobby'),
+        title: Text('Offline Lobby'),
       ),
       body: Center(
         child: Column(
