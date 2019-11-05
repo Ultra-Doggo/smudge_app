@@ -58,7 +58,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     fontWeight: FontWeight.w900,
                   ),
                   textAlign: TextAlign.start,
-                  alignment: Alignment.topLeft,
+                  alignment: Alignment.center,
                 ),
               ],
             ),
