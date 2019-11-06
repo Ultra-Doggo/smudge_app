@@ -18,50 +18,55 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: Colors.blueGrey,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Hero(
-              tag: 'logo',
-              child: Container(
-                height: 200.0,
-                child: Image.asset('images/placeholder_logo.png'),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              SizedBox(
+                height: 20.0,
               ),
-            ),
-            SizedBox(
-              height: 48.0,
-            ),
-            TextField(
-              onChanged: (value) {
-                //Do something with the user input.
-              },
-              decoration: kTextFieldDecoration.copyWith(
-                  hintText: 'Enter your email'
+              Hero(
+                tag: 'logo',
+                child: Container(
+                  height: 200.0,
+                  child: Image.asset('images/placeholder_logo.png'),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 8.0,
-            ),
-            TextField(
-              onChanged: (value) {
-                //Do something with the user input.
-              },
-              decoration: kTextFieldDecoration.copyWith(
-                  hintText: 'Enter your password'
+              SizedBox(
+                height: 20.0,
               ),
-            ),
-            SizedBox(
-              height: 24.0,
-            ),
-            RoundedButton(
-              title: 'Login',
-              color: Colors.lightBlueAccent,
-              onPressed: () {
+              TextField(
+                onChanged: (value) {
+                  //Do something with the user input.
+                },
+                decoration: kTextFieldDecoration.copyWith(
+                    hintText: 'Enter your email'
+                ),
+              ),
+              SizedBox(
+                height: 8.0,
+              ),
+              TextField(
+                onChanged: (value) {
+                  //Do something with the user input.
+                },
+                decoration: kTextFieldDecoration.copyWith(
+                    hintText: 'Enter your password'
+                ),
+              ),
+              SizedBox(
+                height: 8.0,
+              ),
+              RoundedButton(
+                title: 'Login',
+                color: Colors.lightBlueAccent,
+                onPressed: () {
 
-              },
-            ),
-          ],
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
