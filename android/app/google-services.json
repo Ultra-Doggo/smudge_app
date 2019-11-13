@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1040246305200",
+    "firebase_url": "https://smudge-57608.firebaseio.com",
+    "project_id": "smudge-57608",
+    "storage_bucket": "smudge-57608.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040246305200:android:dc7c30c3f097afa3dca675",
+        "android_client_info": {
+          "package_name": "com.edwardevangelista.smudge_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040246305200-38vf1a6gcjhj6mbkf7aaio610eslrcut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKbiDIMZifapaLSW0hw6wCyVevQHYrGSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1040246305200-38vf1a6gcjhj6mbkf7aaio610eslrcut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

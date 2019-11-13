@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:smudge_app/components/rounded_button.dart';
+import 'package:smudge_app/components/hex_converter.dart';
 import 'package:smudge_app/constants.dart';
+import 'package:smudge_app/screens/dashboard_screen.dart';
+
 
 class RegistrationScreen extends StatefulWidget {
 
@@ -14,7 +17,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Color(hexConvert('#2E3192')),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: SingleChildScrollView(
@@ -23,7 +26,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               SizedBox(
-                height: 20.0,
+                height: 30.0,
               ),
               Hero(
                 tag: 'logo',
@@ -40,7 +43,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   //Do something with the user input.
                 },
                 decoration: kTextFieldDecoration.copyWith(
-                    hintText: 'Enter your email'
+                    hintText: 'Email'
                 ),
               ),
               SizedBox(
@@ -51,7 +54,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   //Do something with the user input.
                 },
                 decoration: kTextFieldDecoration.copyWith(
-                    hintText: 'Enter your password'
+                    hintText: 'Password'
                 ),
               ),
               SizedBox(
@@ -59,9 +62,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
               RoundedButton(
                 title: 'Register',
-                color: Colors.blueAccent,
+                color: Color(hexConvert('#c200db')),
                 onPressed: () {
-
+                  Navigator.pushNamed(context, DashboardScreen.id);
                 },
               ),
             ],

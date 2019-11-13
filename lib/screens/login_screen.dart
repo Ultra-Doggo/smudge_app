@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:smudge_app/components/rounded_button.dart';
+import 'package:smudge_app/components/hex_converter.dart';
 import 'package:smudge_app/constants.dart';
+import 'package:smudge_app/screens/dashboard_screen.dart';
+
 
 class LoginScreen extends StatefulWidget {
 
@@ -15,7 +18,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Color(hexConvert('#33135c')),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: SingleChildScrollView(
@@ -24,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               SizedBox(
-                height: 20.0,
+                height: 30.0,
               ),
               Hero(
                 tag: 'logo',
@@ -41,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   //Do something with the user input.
                 },
                 decoration: kTextFieldDecoration.copyWith(
-                    hintText: 'Enter your email'
+                    hintText: 'Email'
                 ),
               ),
               SizedBox(
@@ -52,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   //Do something with the user input.
                 },
                 decoration: kTextFieldDecoration.copyWith(
-                    hintText: 'Enter your password'
+                    hintText: 'Password'
                 ),
               ),
               SizedBox(
@@ -60,9 +63,9 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               RoundedButton(
                 title: 'Login',
-                color: Colors.lightBlueAccent,
+                color: Color(hexConvert('#e80074')),
                 onPressed: () {
-
+                  Navigator.pushNamed(context, DashboardScreen.id);
                 },
               ),
             ],

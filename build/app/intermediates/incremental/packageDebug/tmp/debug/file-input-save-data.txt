@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Nov 05 13:08:19 EST 2019
+#Wed Nov 13 17:11:10 EST 2019
 4.path=flutter_assets/vm_snapshot_data
 13.baseType=DIRECTORY
 8.set=NATIVE_RESOURCE
@@ -10,7 +10,7 @@
 1.base=/Users/edwardevangelista/Local/flutter_apps/smudge_app/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
 8.path=lib/armeabi-v7a/libflutter.so
 12.path=flutter_assets/kernel_blob.bin
-3.base=/Users/edwardevangelista/Local/flutter_apps/smudge_app/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
+3.base=/Users/edwardevangelista/Local/flutter_apps/smudge_app/build/app/intermediates/transforms/mergeJniLibs/debug/0
 14.path=flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
 15.set=ASSET
 4.set=ASSET
@@ -27,13 +27,13 @@
 6.baseType=DIRECTORY
 7.set=DEX
 14.set=ASSET
-3.set=ASSET
+3.set=NATIVE_RESOURCE
 2.baseType=DIRECTORY
 10.baseType=DIRECTORY
 15.baseType=DIRECTORY
 1.path=flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf
 7.baseType=DIRECTORY
-3.path=flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf
+3.path=lib/x86_64/libflutter.so
 10.set=ASSET
 5.path=flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf
 0.base=/Users/edwardevangelista/Local/flutter_apps/smudge_app/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
@@ -41,7 +41,7 @@
 11.path=flutter_assets/images/placeholder_logo.png
 9.path=flutter_assets/LICENSE
 6.set=ASSET
-2.base=/Users/edwardevangelista/Local/flutter_apps/smudge_app/build/app/intermediates/transforms/mergeJniLibs/debug/0
+2.base=/Users/edwardevangelista/Local/flutter_apps/smudge_app/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
 13.path=lib/x86/libflutter.so
 11.baseType=DIRECTORY
 4.base=/Users/edwardevangelista/Local/flutter_apps/smudge_app/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
@@ -51,7 +51,7 @@
 10.base=/Users/edwardevangelista/Local/flutter_apps/smudge_app/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
 13.set=NATIVE_RESOURCE
 8.base=/Users/edwardevangelista/Local/flutter_apps/smudge_app/build/app/intermediates/transforms/mergeJniLibs/debug/0
-2.set=NATIVE_RESOURCE
+2.set=ASSET
 8.baseType=DIRECTORY
 12.base=/Users/edwardevangelista/Local/flutter_apps/smudge_app/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
 14.base=/Users/edwardevangelista/Local/flutter_apps/smudge_app/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
@@ -64,4 +64,4 @@ count=16
 0.path=flutter_assets/AssetManifest.json
 12.set=ASSET
 1.set=ASSET
-2.path=lib/x86_64/libflutter.so
+2.path=flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf

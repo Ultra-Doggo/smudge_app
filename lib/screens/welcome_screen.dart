@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:smudge_app/screens/login_screen.dart';
 import 'package:smudge_app/screens/registration_screen.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:smudge_app/components/rounded_button.dart';
+import 'package:smudge_app/components/hex_converter.dart';
+// import 'package:animated_text_kit/animated_text_kit.dart';
+
 
 class WelcomeScreen extends StatefulWidget {
 
@@ -27,8 +29,19 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[600],
-      body: Padding(
+      //backgroundColor: Colors.blueGrey[600],
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            //stops: [],
+            colors: [
+              Color(hexConvert('#0c0931')),
+              Color(hexConvert('#00cfe5'))
+            ]
+          )
+        ),
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -36,13 +49,16 @@ class _WelcomeScreenState extends State<WelcomeScreen>
           children: <Widget>[
             Row(
               children: <Widget>[
-                Hero(
-                  tag: 'logo',
-                  child: Container(
-                    child: Image.asset('images/placeholder_logo.png'),
-                    height: 60.0,
-                  ),
+
+                Text(
+                  'Smüdge',
+                  style: TextStyle(
+                    fontSize: 66.0,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                  )
                 ),
+                /*
                 ColorizeAnimatedTextKit(
                   text: ['Smudge'],
                   colors: [
@@ -61,6 +77,14 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   textAlign: TextAlign.start,
                   alignment: Alignment.center,
                 ),
+                */
+                Hero(
+                  tag: 'logo',
+                  child: Container(
+                    child: Image.asset('images/placeholder_logo.png'),
+                    height: 75.0,
+                  ),
+                ),
               ],
             ),
             SizedBox(
@@ -68,14 +92,14 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             ),
             RoundedButton(
               title: 'Log In',
-              color: Colors.lightBlueAccent,
+              color: Color(hexConvert('#e80074')),
               onPressed: () {
                 Navigator.pushNamed(context, LoginScreen.id);
               },
             ),
             RoundedButton(
               title: 'Register',
-              color: Colors.blueAccent,
+              color: Color(hexConvert('#c200db')),
               onPressed: () {
                 Navigator.pushNamed(context, RegistrationScreen.id);
               },
