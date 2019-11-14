@@ -33,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 tag: 'logo',
                 child: Container(
                   height: 200.0,
-                  child: Image.asset('images/placeholder_logo.png'),
+                  child: Image.asset('images/banner_logo.png'),
                 ),
               ),
               SizedBox(
@@ -65,6 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 title: 'Login',
                 color: Color(hexConvert('#e80074')),
                 onPressed: () {
+                  // TODO : need to validate the login before going to dash
                   Navigator.pushNamed(context, DashboardScreen.id);
                 },
               ),

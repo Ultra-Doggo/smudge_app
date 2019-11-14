@@ -32,7 +32,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 tag: 'logo',
                 child: Container(
                   height: 200.0,
-                  child: Image.asset('images/placeholder_logo.png'),
+                  child: Image.asset('images/banner_logo.png'),
                 ),
               ),
               SizedBox(
@@ -64,6 +64,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 title: 'Register',
                 color: Color(hexConvert('#c200db')),
                 onPressed: () {
+                  // TODO: store this new user in the database
                   Navigator.pushNamed(context, DashboardScreen.id);
                 },
               ),

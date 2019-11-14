@@ -18,7 +18,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(hexConvert('#237A57')),
+      backgroundColor: Color(hexConvert('#04005E')),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: SingleChildScrollView(
@@ -33,7 +33,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 tag: 'logo',
                 child: Container(
                   height: 200.0,
-                  child: Image.asset('images/placeholder_logo.png'),
+                  child: Image.asset('images/banner_logo.png'),
                 ),
               ),
               SizedBox(
@@ -41,14 +41,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
               ),
               RoundedButton(
                 title: 'Offline Draw',
-                color: Color(hexConvert('#fdbb2d')),
+                color: Color(hexConvert('#E92FFB')),
                 onPressed: () {
                   Navigator.pushNamed(context, CanvasScreen.id);
                 },
               ),
               RoundedButton(
                 title: 'Host Lobby',
-                color: Color(hexConvert('#b21f1f')),
+                color: Color(hexConvert('#FF217A')),
                 onPressed: () {
                   //TODO: change this to be an ONLINE canvas screen
                   Navigator.pushNamed(context, CanvasScreen.id);
@@ -56,7 +56,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               ),
               RoundedButton(
                 title: 'Join Lobby',
-                color: Color(hexConvert('#1a2a6c')),
+                color: Color(hexConvert('#450BD4')),
                 onPressed: () {
                   //TODO: display a popup window, for User to enter lobby code
                 },

@@ -35,10 +35,10 @@ class _WelcomeScreenState extends State<WelcomeScreen>
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            //stops: [],
+            //stops: [0.50, 1.0],
             colors: [
               Color(hexConvert('#0c0931')),
-              Color(hexConvert('#00cfe5'))
+              Color(hexConvert('#00cfe5')),
             ]
           )
         ),
@@ -47,9 +47,9 @@ class _WelcomeScreenState extends State<WelcomeScreen>
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Row(
+            Column(
               children: <Widget>[
-
+                /*
                 Text(
                   'Smüdge',
                   style: TextStyle(
@@ -58,6 +58,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     color: Colors.white,
                   )
                 ),
+                */
                 /*
                 ColorizeAnimatedTextKit(
                   text: ['Smudge'],
@@ -81,15 +82,15 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 Hero(
                   tag: 'logo',
                   child: Container(
-                    child: Image.asset('images/placeholder_logo.png'),
-                    height: 75.0,
+                    height: 400,
+                    child: Image.asset('images/banner_logo.png'),
                   ),
                 ),
               ],
             ),
-            SizedBox(
-              height: 48.0,
-            ),
+            //SizedBox(
+              //height: 48.0,
+            //),
             RoundedButton(
               title: 'Log In',
               color: Color(hexConvert('#e80074')),
