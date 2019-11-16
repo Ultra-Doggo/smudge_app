@@ -1,8 +1,12 @@
+import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
 import 'package:smudge_app/components/rounded_button.dart';
 import 'package:smudge_app/components/hex_converter.dart';
 import 'package:smudge_app/constants.dart';
 import 'package:smudge_app/screens/dashboard_screen.dart';
+import 'package:firebase_database/firebase_database.dart';
+
+final FirebaseDatabase database = FirebaseDatabase.instance;
 
 
 class LoginScreen extends StatefulWidget {
@@ -67,6 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () {
                   // TODO : need to validate the login before going to dash
                   Navigator.pushNamed(context, DashboardScreen.id);
+
                 },
               ),
             ],

@@ -4,7 +4,7 @@
             "outputFile": "/Users/edwardevangelista/Local/flutter_apps/smudge_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-bs/values-bs.xml",
             "map": [
                 {
-                    "source": "/Users/edwardevangelista/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/3867cbfcaa1409df1af6055b97f18d49/res/values-bs/values-bs.xml",
+                    "source": "/Users/edwardevangelista/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/5fc8d5f3050fb536b3d57465dd158db2/res/values-bs/values-bs.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/edwardevangelista/.gradle/caches/transforms-1/files-1.1/play-services-basement-17.0.0.aar/c15b6790b2a5b385f4ced74694a356a9/res/values-bs/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "199",
-                        "endOffsets": "446"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1255",
-                        "endColumns": "199",
-                        "endOffsets": "1450"
-                    }
-                },
-                {
-                    "source": "/Users/edwardevangelista/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/78a818a8f939e9ee9df88038707b397a/res/values-bs/values.xml",
+                    "source": "/Users/edwardevangelista/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/42b06993ffedeec8e79e1a51f42a05bc/res/values-bs/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -52,6 +35,23 @@
                         "startOffsets": "105,213,405,533,645,854,982,1124,1455,1668,1777,1969,2098,2307,2483,2581,2676",
                         "endColumns": "107,191,127,111,208,127,141,130,212,108,191,128,208,175,97,94,113",
                         "endOffsets": "208,400,528,640,849,977,1119,1250,1663,1772,1964,2093,2302,2478,2576,2671,2785"
+                    }
+                },
+                {
+                    "source": "/Users/edwardevangelista/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/5d864cf6e56ec2e966853934cac99672/res/values-bs/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "199",
+                        "endOffsets": "446"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1255",
+                        "endColumns": "199",
+                        "endOffsets": "1450"
                     }
                 }
             ]
