@@ -7,6 +7,7 @@ import 'package:firebase_database/firebase_database.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:smudge_app/screens/welcome_screen.dart';
 import 'package:sync/sync.dart';
 import 'dart:async';
 
@@ -26,6 +27,32 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
+
+  final _auth = FirebaseAuth.instance;
+  FirebaseUser loggedInUser;
+
+  @override
+  void initState() {
+    super.initState();
+    getCurrentUser();
+  }
+
+  // check to see if there is a current user who is signed in
+  void getCurrentUser() async {
+    try {
+      final user = await _auth.currentUser();
+
+      if (user != null) {
+        // then we have a currently signed in user
+        loggedInUser = user;
+        //print(loggedInUser.email); // testing purposes
+      }
+    }
+    catch(e) {
+      print(e);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,8 +92,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   //TODO: change this to be an ONLINE canvas screen
                   //Navigator.pushNamed(context, CanvasScreen.id);
 
-                  String fName = 'ted1';
-                  String lName = 'evangelista';
+                  String fName = 'tedtest';
+                  String lName = 'not!';
                   int myAge = 23;
 
                   //testing database write:
@@ -79,7 +106,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 },
               ),
               RoundedButton(
-                // TODO: change back to join lobby
+                // TODO: change title back to join lobby
                 title: 'Read from DB',
                 color: Color(hexConvert('#450BD4')),
                 onPressed: () {
@@ -95,10 +122,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 },
               ),
               RoundedButton(
-                // TODO: change back to join lobby
-                title: 'Google Sign-in',
+                title: 'Logout',
                 color: Color(hexConvert('#000000')),
-                //onPressed: () => _gSignin(),
+                onPressed: () {
+                  // TODO: if we have enough time, maybe have a popup/dialog box
+                  // asking if the user is sure they want to logout
+
+                  _auth.signOut();
+                  Navigator.pop(context); // takes us back to the previous screen
+                  Navigator.pop(context);
+                },
               ),
             ],
           ),
@@ -107,35 +140,4 @@ class _DashboardScreenState extends State<DashboardScreen> {
     );
   }
 
-  // ignore: missing_return
-  /*
-  // not working yet....
-  Future<FirebaseUser> _gSignin() async {
-
-    GoogleSignInAccount googleSignInAccount = await _googleSignIn.signIn();
-    GoogleSignInAuthentication googleAuth = await googleSignInAccount.authentication;
-
-    final AuthCredential credential = GoogleAuthProvider.getCredential(
-        idToken: googleAuth.idToken,
-        accessToken: googleAuth.accessToken,
-    );
-
-
-
-    final FirebaseUser user = await _auth.signInWithCredential(credential);
-
-
-
-    //(await _firebaseAuth.signInWith)
-
-    // await _auth.signInWithCredential(credential);
-
-    print("User is: ${user.displayName}");
-
-    return user;
-
-  }
-  */
-
 }
-

@@ -5,6 +5,8 @@ import 'package:smudge_app/components/hex_converter.dart';
 import 'package:smudge_app/constants.dart';
 import 'package:smudge_app/screens/dashboard_screen.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 
 final FirebaseDatabase database = FirebaseDatabase.instance;
 
@@ -19,6 +21,11 @@ class LoginScreen extends StatefulWidget {
 
 
 class _LoginScreenState extends State<LoginScreen> {
+
+  final _auth = FirebaseAuth.instance;
+  String email;
+  String password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,8 +51,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 20.0,
               ),
               TextField(
+                keyboardType: TextInputType.emailAddress,
+                textAlign: TextAlign.center,
                 onChanged: (value) {
                   //Do something with the user input.
+                  email = value;
                 },
                 decoration: kTextFieldDecoration.copyWith(
                     hintText: 'Email'
@@ -55,8 +65,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 8.0,
               ),
               TextField(
+                obscureText: true,
+                textAlign: TextAlign.center,
                 onChanged: (value) {
                   //Do something with the user input.
+                  password = value;
                 },
                 decoration: kTextFieldDecoration.copyWith(
                     hintText: 'Password'
@@ -68,9 +81,25 @@ class _LoginScreenState extends State<LoginScreen> {
               RoundedButton(
                 title: 'Login',
                 color: Color(hexConvert('#e80074')),
-                onPressed: () {
+                onPressed: () async {
+                  try {
+                    final user = await _auth.signInWithEmailAndPassword(
+                        email: email, password: password
+                    );
+                    if (user != null) {
+                      Navigator.pushNamed(context, DashboardScreen.id);
+                    }
+                  }
+                  catch (e) {
+                    print(e);
+                  }
+
+
+
+
+
                   // TODO : need to validate the login before going to dash
-                  Navigator.pushNamed(context, DashboardScreen.id);
+                  //Navigator.pushNamed(context, DashboardScreen.id);
 
                 },
               ),

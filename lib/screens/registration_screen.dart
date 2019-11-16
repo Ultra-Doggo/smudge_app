@@ -3,6 +3,7 @@ import 'package:smudge_app/components/rounded_button.dart';
 import 'package:smudge_app/components/hex_converter.dart';
 import 'package:smudge_app/constants.dart';
 import 'package:smudge_app/screens/dashboard_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 
 class RegistrationScreen extends StatefulWidget {
@@ -14,6 +15,13 @@ class RegistrationScreen extends StatefulWidget {
 }
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
+
+  // create a new authentication instance
+  final _auth = FirebaseAuth.instance;
+
+  String email;
+  String password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,8 +47,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 height: 20.0,
               ),
               TextField(
+                keyboardType: TextInputType.emailAddress,
+                textAlign: TextAlign.center,
                 onChanged: (value) {
                   //Do something with the user input.
+                  email = value;
                 },
                 decoration: kTextFieldDecoration.copyWith(
                     hintText: 'Email'
@@ -50,8 +61,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 height: 8.0,
               ),
               TextField(
+                obscureText: true,
+                textAlign: TextAlign.center,
                 onChanged: (value) {
                   //Do something with the user input.
+                  password = value;
                 },
                 decoration: kTextFieldDecoration.copyWith(
                     hintText: 'Password'
@@ -63,9 +77,29 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               RoundedButton(
                 title: 'Register',
                 color: Color(hexConvert('#c200db')),
-                onPressed: () {
+                onPressed: () async {
+                  try {
+                    // this returns a Future
+                    final newUser = await _auth.createUserWithEmailAndPassword(
+                        email: email, password: password
+                    );
+                    if (newUser != null) {
+                      Navigator.pushNamed(context, DashboardScreen.id);
+                    }
+                  }
+                  catch (e) {
+                    print(e);
+                  }
+
+
+
+
                   // TODO: store this new user in the database
-                  Navigator.pushNamed(context, DashboardScreen.id);
+                  //Navigator.pushNamed(context, DashboardScreen.id);
+
+                  //print(email);
+                  //print(password);
+
                 },
               ),
             ],
