@@ -1,4 +1,4 @@
-#Fri Nov 15 22:04:59 EST 2019
-base.0=/Users/edwardevangelista/Local/flutter_apps/smudge_app/build/app/intermediates/transforms/dexMerger/debug/0
+#Wed Nov 20 07:15:32 EST 2019
+base.0=C\:\\Users\\Kaine-PC\\StudioProjects\\smudge_app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

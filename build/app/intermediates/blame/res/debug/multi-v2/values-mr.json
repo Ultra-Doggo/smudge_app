@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/edwardevangelista/Local/flutter_apps/smudge_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-mr/values-mr.xml",
+            "outputFile": "C:\\Users\\Kaine-PC\\StudioProjects\\smudge_app\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mr\\values-mr.xml",
             "map": [
                 {
-                    "source": "/Users/edwardevangelista/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/5fc8d5f3050fb536b3d57465dd158db2/res/values-mr/values-mr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "2752",
-                        "endColumns": "100",
-                        "endOffsets": "2848"
-                    }
-                },
-                {
-                    "source": "/Users/edwardevangelista/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/42b06993ffedeec8e79e1a51f42a05bc/res/values-mr/values.xml",
+                    "source": "C:\\Users\\Kaine-PC\\.gradle\\caches\\transforms-2\\files-2.1\\f7ca8e9359c08d49d08aa9f173bbe968\\play-services-base-17.0.0\\res\\values-mr\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "/Users/edwardevangelista/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/5d864cf6e56ec2e966853934cac99672/res/values-mr/values.xml",
+                    "source": "C:\\Users\\Kaine-PC\\.gradle\\caches\\transforms-2\\files-2.1\\31da19215fcd239cc2f2d90aa88bc127\\core-1.0.0\\res\\values-mr\\values-mr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "2752",
+                        "endColumns": "100",
+                        "endOffsets": "2848"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Kaine-PC\\.gradle\\caches\\transforms-2\\files-2.1\\5a176e7b26541c6a443c732373c84b74\\jetified-play-services-basement-17.0.0\\res\\values-mr\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

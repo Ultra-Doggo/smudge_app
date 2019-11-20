@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/edwardevangelista/Local/flutter_apps/smudge_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "C:\\Users\\Kaine-PC\\StudioProjects\\smudge_app\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
             "map": [
                 {
-                    "source": "/Users/edwardevangelista/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/5fc8d5f3050fb536b3d57465dd158db2/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "C:\\Users\\Kaine-PC\\.gradle\\caches\\transforms-2\\files-2.1\\31da19215fcd239cc2f2d90aa88bc127\\core-1.0.0\\res\\values-en-rAU\\values-en-rAU.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
